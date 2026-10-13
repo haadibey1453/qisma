@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: qisma
+  datasource:
+    url: jdbc:postgresql://localhost:5433/qisma
+    username: qisma
+    password: qisma
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate    #Flyway creates tables;
+logging:
+  level:
+    org.hibernate.SQL: debug  # prints every SQL query, useful for spotting N+1
