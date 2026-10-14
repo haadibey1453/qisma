@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17
+    container_name: qisma-db
+    environment:
+      POSTGRES_DB: qisma
+      POSTGRES_USER: qisma
+      POSTGRES_PASSWORD: qisma
+    ports:
+      - "5433:5433"
+    volumes:
+      - qisma-data:/var/lib/postgresql/data
+
+volumes:
+  qisma-data:
